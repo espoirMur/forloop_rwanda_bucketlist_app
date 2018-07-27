@@ -93,7 +93,7 @@ After doing this, install Flask using pip.
 
 
 ```
-pip install flask
+pip install flask, flask_script
 ```
 
 ## Environment Configurations
@@ -110,13 +110,69 @@ export SECRET="some-very-long-string-of-random-characters-CHANGE-TO-YOUR-LIKING"
 ```
 export APP_SETTINGS="development"
 ```
+## creating the api
 
+edit the app/__init__file  and the run.py file  without application factory
+and check hello world
+
+```python
+import os
+from flask_api import FlaskAPI
+from flask_sqlalchemy import SQLAlchemy
+
+# local import
+from instance.config import app_config
+
+# initialize sql-alchemy
+
+config_name = os.getenv('APP_SETTINGS')  # config_name = "development"
+app = FlaskAPI(__name__, instance_relative_config=True)
+app.config.from_object(app_config[config_name])
+app.config.from_pyfile('config.py')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+```
+
+run.py 
+
+
+```python 
+from app import app
+
+
+@app.route('/', methods=['GET'])
+def home():
+    return 'hello world'
+
+
+if __name__ == '__main__':
+    app.run()
+```
 ## Configuring the Database
 
 let use sql litle because of his siimlicity but we will use postgres in progression
 'sqlite:////tmp/flask_api.db'
 
-## creating the api
+To create the initial database, 
+just import the db object from an interactive Python shell and run the SQLAlchemy.create_all() 
+method to create the tables and database:
 
-edit the app/__init__file  and the run.py file
+```
+python
+>>> from yourapplication import db
+>>> db.create_all()
+```
+## Edit the app with application factiry
+
+## Data Model
+
+model.py
+
+## Update the manager script
+
+
+## api functionality
+
+
 
