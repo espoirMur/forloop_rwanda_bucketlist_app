@@ -62,7 +62,7 @@ using the following command :
  and this :
  
  ```
- touch app/__init__.py app/model.py instance/__init__.py
+ touch app/__init__.py app/model.py instance/__init__.py instance/config.py
  ```
 
 make sure we have the same application folder structure by doing 
@@ -87,3 +87,36 @@ you should have the same directory structure as me
 └── test_buckeliist.py
 
 ```
+## Install Flask
+
+After doing this, install Flask using pip.
+
+
+```
+pip install flask
+```
+
+## Environment Configurations
+
+we will write the code in instance config
+
+
+## Export 
+
+```
+export SECRET="some-very-long-string-of-random-characters-CHANGE-TO-YOUR-LIKING"
+```
+
+```
+export APP_SETTINGS="development"
+```
+
+## Configuring the Database
+
+let use sql litle because of his siimlicity but we will use postgres in progression
+'sqlite:////tmp/flask_api.db'
+
+## creating the api
+
+edit the app/__init__file  and the run.py file
+
