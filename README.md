@@ -1,7 +1,7 @@
 # forloop_rwanda_bucketlist_app
 This repos contains the code and instruction we will be using during forloop rwanda bootcamp
 
-We will be [the following](https://scotch.io/tutorials/build-a-restful-api-with-flask-the-tdd-way) tutorial in order to build 
+We will be [the following](https://scotch.io/tutorials/build-a-restful-api-with-flask-the-tdd-way) tutorial in order to build http://programwithus.com/learn-to-code/Pip-and-virtualenv-on-Windows/ 
 a restfull api with python flask and may be the TDD way.
 
 #### Make sure you have python, virtual environnement installed.
