@@ -7,7 +7,7 @@ class Config(object):
     CSRF_ENABLED = True
     SECRET = os.getenv('SECRET')
     SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/flask_api.db'
-    # for windows sqlite:///c:/absolute/path/to/database
+    # for windows sqlite:///c:/tmp/flask_api.db
 
 
 class DevelopmentConfig(Config):
