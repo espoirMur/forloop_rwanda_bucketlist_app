@@ -132,7 +132,19 @@ model.py
 
 ## Update the manager script
 
+```
+python  manage.py db init
+```
 
+
+```
+python  manage.py db migrate
+```
+
+
+```
+python  manage.py db upgrade
+```
 ## api functionality
 
 
